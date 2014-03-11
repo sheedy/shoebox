@@ -1,0 +1,23 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// .wrap {
+//   ...
+//   @extend %clearfix;
+// }
+// .main-header {
+//   ...
+//   @extend %clearfix;
+// }
+
+/* ====== media ====== */
+.media {margin:10px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}

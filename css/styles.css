@@ -1,0 +1,230 @@
+/*
+Source: http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
+ */
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+#container * {
+    border: 1px solid #000
+}
+
+a:link { color: red; }
+a:visted { color: purple; }
+
+/*X + Y*/
+ul + p {
+   color: red;
+}
+/*This is referred to as an adjacent selector. It will select only the element that is immediately preceded by the former element. In this case, only the first paragraph after each ul will have red text.*/
+
+/*X > Y*/
+div#container > ul {
+  border: 1px solid black;
+}
+/*The difference between the standard X Y and X > Y is that the latter will only select direct children.*/
+
+/*X ~ Y*/
+ul ~ p {
+   color: red;
+}
+/*This sibling combinator is similar to X + Y, however, it’s less strict.
+While an adjacent selector (ul + p) will only select the first element that is
+immediately preceded by the former selector, this one is more generalized.
+It will select, referring to our example above, any p elements, as long as they follow a ul.*/
+
+/*X[title]*/
+a[title] {
+   color: green;
+}
+/*Referred to as an attributes selector, in our example above, this will only select the anchor tags that have a title attribute*/
+
+/*X[href="foo"]*/
+a[href="http://net.tutsplus.com"] {
+  color: #1f6053; /* nettuts green */
+}
+
+/*X[href*="nettuts"]*/
+a[href*="tuts"] {
+  color: #1f6053; /* nettuts green */
+}
+/*There we go; that’s what we need. The star designates that the proceeding value must appear somewhere in the attribute’s value. That way, this covers nettuts.com, net.tutsplus.com, and even tutsplus.com.*/
+
+/*X[href^="http"]*/
+a[href^="http"] {
+   background: url(path/to/external/icon.png) no-repeat;
+   padding-left: 10px;
+}
+/*^ denotes the beginning of a string*/
+
+/*X[href$=".jpg"]*/
+a[href$=".jpg"] {
+   color: red;
+}
+/*Again, we use a regular expressions symbol, $, to refer to the end of a string.*/
+
+/*X[data-*="foo"]*/
+a[data-filetype="image"] {
+   color: red;
+}
+
+/*
+<a href="path/to/image.jpg" data-filetype="image"> Image Link </a>
+Then, with that hook in place, we can use a standard attributes selector to target only those anchors.
+view plaincopy to clipboardprint?
+*/
+a[data-filetype="image"] {
+   color: red;
+}
+
+/*X[foo~="bar"]*/
+/*
+"<a href="path/to/image.jpg" data-info="external image"> Click Me, Fool </a>
+With that markup in place, now we can target any tags that have either of those values, by using the ~ attributes selector trick.
+view plaincopy to clipboardprint?
+*/
+/* Target data-info attr that contains the value "external" */
+a[data-info~="external"] {
+   color: red;
+}
+
+/* And which contain the value "image" */
+a[data-info~="image"] {
+  border: 1px solid black;
+}
+
+/*X:checked*/
+input[type=radio]:checked {
+   border: 1px solid black;
+}
+
+/*X:after*/
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    }
+
+.clearfix {
+   *display: inline-block;
+   _height: 1%;
+}
+/*This hack uses the :after pseudo class to append a space after the element, and then clear it. It's an excellent trick to have in your tool bag, particularly in the cases when the overflow: hidden; method isn't possible.*/
+
+/*X:hover*/
+div:hover {
+  background: #e3e3e3;
+}
+a:hover {
+ border-bottom: 1px solid black;
+}
+
+/*X:not(selector)*/
+div:not(#container) {
+   color: blue;
+}
+*:not(p) {
+  color: green;
+}
+
+/*X::pseudoElement*/
+p::first-line {
+   font-weight: bold;
+   font-size: 1.2em;
+}
+/*We can use pseudo elements (designated by ::) to style fragments of an element, such as the first line, or the first letter. Keep in mind that these must be applied to block level elements in order to take effect.*/
+
+/*Target the First Letter of a Paragraph*/
+p::first-letter {
+   float: left;
+   font-size: 2em;
+   font-weight: bold;
+   font-family: cursive;
+   padding-right: 2px;
+}
+/*This snippet is an abstraction that will find all paragraphs on the page, and then sub-target only the first letter of that element.*/
+
+/*Target the First Line of a Paragraph*/
+p::first-line {
+   font-weight: bold;
+   font-size: 1.2em;
+}
+
+/*X:nth-child(n)*/
+li:nth-child(3) {
+   color: red;
+}
+
+/*X:nth-last-child(n)*/
+li:nth-last-child(2) {
+   color: red;
+}
+/*What if you had a huge list of items in a ul, and only needed to access, say, the third to the last item? Rather than doing li:nth-child(397), you could instead use the nth-last-child pseudo class.*/
+
+/*X:nth-of-type(n)*/
+ul:nth-of-type(3) {
+   border: 1px solid black;
+}
+/*Imagine mark-up that contains five unordered lists. If you wanted to style only the third ul, and didn't have a unique id to hook into, you could use the nth-of-type(n) pseudo class. In the snippet above, only the third ul will have a border around it.*/
+
+/*X:nth-last-of-type(n)*/
+ul:nth-last-of-type(3) {
+   border: 1px solid black;
+}
+
+/*X:first-child*/
+ul li:first-child {
+   border-top: none;
+}
+
+/*X:last-child*/
+ul > li:last-child {
+   color: green;
+}
+
+/*X:only-child*/
+div p:only-child {
+   color: red;
+}
+/*
+
+<div><p> My paragraph here. </p></div>
+
+<div>
+   <p> Two paragraphs total. </p>
+   <p> Two paragraphs total. </p>
+</div>
+In this case, the second div's paragraphs will not be targeted; only the first div. As soon as you apply more than one child to an element, the only-child pseudo class ceases to take effect.*/
+
+/*X:only-of-type*/
+li:only-of-type {
+   font-weight: bold;
+}
+/*target all uls, which have only a single list item.*/
+ul > li:only-of-type {
+   font-weight: bold;
+}
+
+/*X:first-of-type*/
+/*
+<div>
+   <p> My paragraph here. </p>
+   <ul>
+      <li> List Item 1 </li>
+      <li> List Item 2 </li>
+   </ul>
+
+   <ul>
+      <li> List Item 3 </li>
+      <li> List Item 4 </li>
+   </ul>
+</div>
+*/
+ul:first-of-type > li:nth-child(2) {
+   font-weight: bold;
+}
