@@ -5,6 +5,7 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cssshrink": "0.0.7",
     "grunt-readme-generator": "^0.3.41",
     "grunt-sketch": "^1.0.1",
     "grunt-svgmin": "^0.4.0",
