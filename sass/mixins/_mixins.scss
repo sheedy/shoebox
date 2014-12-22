@@ -1,0 +1,10 @@
+// http://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+element {
+     @include background-opacity(#333, 0.5);
+}
+
