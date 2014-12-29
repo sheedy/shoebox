@@ -1,0 +1,15 @@
+= responsive($attr, $full, $mid:false, $narrow:false)
+  #{$attr}: #{$full}
+  @if $mid
+    @media screen and (max-width: 800px)
+      #{$attr}: #{$mid}
+  @if $narrow
+    @media screen and (max-width: 480px)
+      #{$attr}: #{$narrow}
+
+// Usage
+// .my_cool_element
+//   +responsive(font-size, 24px, 20px)
+//   +responsive(margin-bottom, 40px, 20px)
+//   font-size: 24px
+//   margin-bottom: 40px
