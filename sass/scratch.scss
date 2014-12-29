@@ -1,0 +1,70 @@
+// Convert Hex, RGB, or Named Color to RGBA
+
+// http://stackoverflow.com/questions/9270844/sass-compass-convert-hex-rgb-or-named-color-to-rgba
+
+// Sets the opacity of a color.
+
+// Examples:
+
+rgba(#102030, 0.5) => rgba(16, 32, 48, 0.5)
+rgba(blue, 0.2) => rgba(0, 0, 255, 0.2)
+
+// Parameters:
+// (Color) color
+// (Number) alpha — A number between 0 and 1
+
+// Returns:
+// (Color)
+
+// http://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+$base-color:                    # 0292d9;
+$secondary-color:               # 88bf2b;
+
+// Darker
+$base-color-darker:             darken($base-color, 10%);
+$secondary-color-darker:        darken($secondary-color, 10%);
+// Lighter
+$base-color-lighter:            lighten($base-color, 10%);
+$secondary-color-lighter:       lighten($secondary-color, 10%);
+
+// Saturated
+$base-color-saturated:          saturate($base-color, 10%);
+$secondary-color-saturated:     saturate($secondary-color, 10%);
+// Desaturated
+$base-color-desaturated:        desaturate($base-color, 10%);
+$secondary-color-desaturated:   desaturate($secondary-color, 10%);
+
+adjust-hue( $base-color, 20% )
+rgba( $base-color, .7 )
+tint( $base-color, 10% )
+shade( $base-color, 10% )
+
+// http://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+element {
+     @include background-opacity(#333, 0.5);
+}
+
+.color-swatch {
+  width: 130px;
+  height: 100px;
+
+  float: left;
+  display: block;
+
+  &--1 {
+    background-color: $base-color;
+  }
+
+  &--2 {
+    background-color: $base-color-darker;
+  }
+
+  &--3 {
+    background-color: $base-color-lighter;
+  }
+}
