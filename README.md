@@ -3,6 +3,22 @@
 > Stuff I'm collecting/experimenting with
 
 ### Notes
+- Create script to add badges to all readme files
+    - https://david-dm.org
+    - https://coveralls.io
+    - https://travis-ci.org
+- https://github.com/wecodemore/grunt-githooks
+
+#### Shell
+- [Powerline](https://github.com/powerline/powerline)
+- [Powerline Fonts](https://github.com/powerline/fonts)
+- [Awesome Terminal Fonts for Powerline](https://github.com/gabrielelana/awesome-terminal-fonts)
+- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) fixes the above  (Awesome Terminal Fonts for Powerline) for Mac
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) symbols for unicode fonts when using Nerd Fonts
+- [Github Octicons](https://octicons.github.com/)
+- [Powerline theme](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme) - (just theme, not actually powerline)
+- [Agnoster theme](https://gist.github.com/agnoster/3712874)
+- [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 
 #### Wireframe CSS
 - [CSS image borders](http://www.sitepoint.com/css3-border-images/) (for "wireframe mode")
@@ -45,3 +61,7 @@
 #### Miscellaneious
 - [grunt-webfont template](https://github.com/sapegin/grunt-webfont/blob/master/tasks/templates/bem.css)
 - [Signet](https://github.com/HubSpot/signet)
+
+#### Javascript/Node
+
+- [10 Habits of a Happy Node Hacker (2016)](http://blog.heroku.com/archives/2015/11/10/node-habits-2016)
