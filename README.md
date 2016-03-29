@@ -2,6 +2,28 @@
 
 > Stuff I'm collecting/experimenting with
 
+### Boilerplate/Yeoman generator
+
+- package.json
+- bower.json
+- .bower.rc
+- Gemfile
+- .env
+- Gruntfile
+- grunt-configs
+- .eslintrc
+- .jslintrc
+- .jshintrc
+- 
+
+### Sublime Text
+#### Linting
+[Sublime Linter](http://sublimelinter.readthedocs.org/en/latest/about.html)
+- [sass-lint](https://github.com/sasstools/sass-lint) (NodeJS) ([config](http://sasstools.github.io/make-sass-lint-config/))
+- [scss-lint](https://github.com/attenzione/SublimeLinter-scss-lint) (Ruby)
+- [html-tidy](https://github.com/SublimeLinter/SublimeLinter-html-tidy)
+- 
+
 ### Notes
 - Create script to add badges to all readme files
     - https://david-dm.org
