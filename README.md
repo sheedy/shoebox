@@ -13,8 +13,11 @@
 - grunt-configs
 - .eslintrc
 - .jslintrc
-- .jshintrc
-- 
+- .jscsrc -
+- .jsfmtrc - [JSFMT](https://github.com/ionutvmi/sublime-jsfmt)
+- .esformatter - [Esformatter](https://github.com/millermedeiros/esformatter) and [sublime-esformatter](https://github.com/piuccio/sublime-esformatter)
+
+
 
 ### Sublime Text
 #### Linting
@@ -22,7 +25,9 @@
 - [sass-lint](https://github.com/sasstools/sass-lint) (NodeJS) ([config](http://sasstools.github.io/make-sass-lint-config/))
 - [scss-lint](https://github.com/attenzione/SublimeLinter-scss-lint) (Ruby)
 - [html-tidy](https://github.com/SublimeLinter/SublimeLinter-html-tidy)
-- 
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+- [AirBnB React linting styleguide](https://github.com/airbnb/javascript/tree/master/react)
+- [Linting *properly* with JS and JSX](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48#.jksk2ewsm)
 
 ### Notes
 - Create script to add badges to all readme files
