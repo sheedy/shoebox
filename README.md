@@ -16,7 +16,14 @@
 - .jscsrc -
 - .jsfmtrc - [JSFMT](https://github.com/ionutvmi/sublime-jsfmt)
 - .esformatter - [Esformatter](https://github.com/millermedeiros/esformatter) and [sublime-esformatter](https://github.com/piuccio/sublime-esformatter)
-
+- All these https://www.airpair.com/node.js/posts/top-10-mistakes-node-developers-make
+- https://github.com/baryshev/look
+- https://github.com/visionmedia/debug
+- https://github.com/trentm/node-bunyan/
+- https://www.sitepoint.com/shorthand-javascript-techniques/
+- https://github.com/nlf/precommit-hook
+- https://github.com/gtramontina/ghooks
+- https://github.com/brigade/overcommit/
 
 
 ### Sublime Text
