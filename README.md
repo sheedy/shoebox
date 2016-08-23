@@ -36,11 +36,15 @@
 - [AirBnB React linting styleguide](https://github.com/airbnb/javascript/tree/master/react)
 - [Linting *properly* with JS and JSX](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48#.jksk2ewsm)
 
+### Docker
+- Delete orpahn containers and images https://gist.github.com/ngpestelos/4fc2e31e19f86b9cf10b
+- http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+
 ### Notes
 - Create script to add badges to all readme files
-    - https://david-dm.org
-    - https://coveralls.io
-    - https://travis-ci.org
+	- https://david-dm.org
+	- https://coveralls.io
+	- https://travis-ci.org
 - https://github.com/wecodemore/grunt-githooks
 
 #### Shell
@@ -90,6 +94,9 @@
 - [Using the map data type in Sass](http://blustemy.io/using-the-map-data-type-in-sass/)
 - [Handy sass mixins](http://web-design-weekly.com/2013/05/12/handy-sass-mixins/)
 - [use lengths not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+- [PurifyCSS](https://github.com/purifycss/gulp-purifycss)
+- [Critical CSS](https://github.com/addyosmani/critical)
+- [Next CSS](http://cssnext.io/)
 
 
 #### Miscellaneious
