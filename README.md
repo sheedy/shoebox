@@ -58,6 +58,11 @@
 - [Agnoster theme](https://gist.github.com/agnoster/3712874)
 - [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 
+### Bash scripts
+
+- New bare git repo in predetermined `repos` directory
+
+
 #### Wireframe CSS
 - [CSS image borders](http://www.sitepoint.com/css3-border-images/) (for "wireframe mode")
 
